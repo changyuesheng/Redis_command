@@ -33,7 +33,7 @@
 |append key value|在key的值后连接参数的value|
 |strlen key|查看字符串的长度|
 |getrange key startindex endindex|获取key的value指定区间，若为负数，则表示倒数|
-|set key value nx当且仅当key不存在时，设置新的键值对，否则返回nil|
+|set key value nx|当且仅当key不存在时，设置新的键值对，否则返回nil|
 |set key value xx|且仅当key存在时，修改键值对，否则返回nil|
 |getset key value|返回key的value，并修改其为新的value，若不存在返回nil|
 #### 2.2 value为数值的操作
