@@ -1,4 +1,4 @@
-# Simple Golang && Redis Tutorial
+# Simple Redis Tutorial
 ## Redis 指令
 ### 1. 基本指令
 #### 1.1 基本数据库指令
@@ -70,9 +70,27 @@
 |hexist key field|查询是否存在某个filed|
 |hstrlen key field|查询对应value的长度|
 #### 3.2 value是数值
+|hash指令|含义|
+|-|:-------:|
 |hincrby key field 数值|按key和field给value怎加指定数值|
 |hincrbyfloat key field 小数值|按key和field给value怎加指定数值|
 ### 4 列表List
+#### 4.1 基本操作
+|list指令|含义|
+|-|:-------:|
+|rpush key v1 v2 ...|在队列右侧加入多个值|
+|lpush key v2 v1 ...|在队列左侧加入多个值，注意顺序|
+|rpop key number|在队列左边弹出number个数值|
+|lpop key number|在队列左侧弹出number个数值|
+|rpushx key v1 v2 ...|在队列右侧加入多个值，当且仅当list存在|
+|lpushx key v1 v2 ...|在队列左侧加入多个值|
+|lset key index value|修改指定位置的值|
+|linsert key before/after value value|在指定数据前后插入新数据|
+|lindex key index|按照索引查找值|
+|lrange key strat end|查询范围内的数据|
+|llen key|查看队列长度|
+|lrem key count value|从左或者从右删除count数量的value|
+|ltrim key start end|修剪list到指定区间|
 ### 5 集合Set
 ### 6 有序集合Zset
 ### 7 遍历
